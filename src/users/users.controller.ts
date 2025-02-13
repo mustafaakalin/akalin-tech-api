@@ -1,6 +1,6 @@
 import { Controller, Post, Body, Get, Param, UseGuards, ForbiddenException, Req } from '@nestjs/common';
 import { UserService } from './users.service';
-import { RegisterUserDto } from './decorators/registerUser.dto';
+import { RegisterDto } from '../auth/dto/register.dto';
 import { AuthGuard } from '@nestjs/passport';
 import { AbilityFactory } from './ability.factory';
 
@@ -29,11 +29,11 @@ export class UserController {
     }
   }
 
-  // Admin only endpoint
+  
   @Post()
   @CheckPolicies({ action: Action.Create, subject: Subjects.User })
-  async create(@Body() registerUserDto: RegisterUserDto) {
-    return this.userService.register(registerUserDto);
+  async create(@Body() registerDto: RegisterDto) {
+    return this.userService.create(registerDto);
   }
 
   // Regular user can access their own profile

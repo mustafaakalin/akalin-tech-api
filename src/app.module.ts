@@ -27,6 +27,7 @@ import { CaslModule } from './casl/casl.module';
       isGlobal: true, // Makes ConfigModule available globally
     }),
     UserModule,
+    AuthModule,
     CaslModule,
   ],
   controllers: [
