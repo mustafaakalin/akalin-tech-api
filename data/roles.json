@@ -1,0 +1,9 @@
+{
+    "admin": {
+      "actions": ["manage"]
+    },
+    "user": {
+      "actions": ["read"]
+    }
+  }
+  

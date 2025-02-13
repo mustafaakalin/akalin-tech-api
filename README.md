@@ -79,6 +79,8 @@ docker-compose down --rmi all --volumes
 ```bash
 docker-compose up -d # or verbose remove "-d" param.
 ```
+#### good for casl logic
+https://blog.bytescrum.com/integrating-casl-with-nestjs-a-step-by-step-guide
 
 With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
 
